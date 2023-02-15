@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<style>
+    input::-webkit-calendar-picker-indicator {
+  
+    opacity: 0;
+
+    width:40%
+    
+    
+}
+ 
+
+  
+
+.productImg{
+    width: 10%;
+    aspect-ratio: 1/1;
+}
+
+   
+</style>
+</head>
+<body>
+<section class="mb-3 mt-2">
+<div class="container">
+    <div class="row ">
+        <div class="col-4 d-flex justify-content-start">
+          
+            <div class="input-group input-group-sm">
+    
+                <input name="search" type="text" placeholder="訂單查詢">
+                <label for="listdate" class="fs-3 ms-2 me-2">
+                    <i class="bi bi-calendar-date-fill"></i>
+                </label>
+                <input type="date" class="form-control dateinput d-inline-block" id="listdate" >
+            
+            </div>
+           
+               
+         
+
+        </div>
+        <div class="col-8 d-flex justify-content-end">
+           
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-left-short"></i></button>
+                  <button type="button" class="btn btn-outline-primary">1</button>
+                  <button type="button" class="btn btn-outline-primary">2</button>
+                  <button type="button" class="btn btn-outline-primary">3</button>
+                  <button type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-right-short"></i></button>
+                </div>
+        </div>
+        
+    </div>
+
+</section>
+
+
+
+<section>
+   <div class="container border pt-2 pb-2">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+            <h4>訂單編號:P1586415360</h4>
+            <p>成立時間:2023.01.28</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+       <div class="col-12 d-flex justify-content-around align-items-center">
+          <img src="./img/a.jpg" alt="" class="productImg">
+          <h4>人頭馬VSOP特選桶白蘭地 &nbsp;&nbsp;X3</h4>
+          <h5>$1500元</h5>
+       </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#allList" type="button" aria-expanded="false" aria-controls="allList">
+                檢視所有商品&nbsp;<i class="bi bi-caret-down-fill"></i>
+              </a>
+        </div>
+    </div>
+    <hr>
+    <div class="row " id="allList">
+        <div class="col-12 d-flex justify-content-around align-items-center collapse mb-2" >
+                <img src="./img/a.jpg" alt="" class="productImg">
+                <h4>人頭馬VSOP特選桶白蘭地 &nbsp;&nbsp;X3</h4>
+                <h5>$1500元</h5>
+        </div>
+        <div class="col-12 d-flex justify-content-around align-items-center collapse mb-2" >
+            <img src="./img/a.jpg" alt="" class="productImg">
+            <h4>人頭馬VSOP特選桶白蘭地 &nbsp;&nbsp;X3</h4>
+            <h5>$1500元</h5>
+        </div>
+        <hr>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12 d-flex justify-content-between">
+            <p class="fs-5">7商品</p>
+            <p class="fs-5">訂單金額:$2100元</p>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-12 d-flex justify-content-end">
+            <button class="btn btn-primary">再買一次</button>
+        </div>
+    </div>
+   </div>
+  
+
+</section>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script> 
+    <script>
+     
+
+
+
+
+    </script> 
+</body>
+</html>

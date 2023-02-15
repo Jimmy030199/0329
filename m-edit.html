@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   
+    <style>
+.membeteditTopic{
+
+
+}
+.editmemberData{
+    /* background-color:green; */
+
+}
+.changePhoto{
+   
+    /* background-color:red; */
+    
+
+}
+.memberchangePhoto{  width: 150px;
+            aspect-ratio: 1/1;
+            object-fit: cover;}
+.newPassword{
+    /* background-color:blue; */
+}
+
+#demo{ width: 150px;
+            aspect-ratio: 1/1;
+            object-fit: cover;}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="membeteditTopic mt-2 border-bottom border-2">
+            <h2>編輯個資</h2>
+        </div>
+    </div>
+    <div class="row mt-1 align-items-center justify-content-between">
+        <div class="editmemberData col-8 pe-5">
+            
+            <div class="input-group input-group-sm mb-2 ">
+                <span class="input-group-text" id="name">姓名</span>
+                <input type="text" class="form-control" placeholder="姓名" aria-label="Username" aria-describedby="name">
+                <span class="input-group-text text-success " id="name"><i class="bi bi-pen-fill"></i></span>
+              </div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="phone">電話</span>
+                <input type="tel" class="form-control" placeholder="電話" aria-label="Username" aria-describedby="phone">
+                <span class="input-group-text text-success " id="phone"><i class="bi bi-telephone-fill"></i></span>
+
+              </div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="birthday">生日</span>
+                <input type="date" class="form-control" placeholder="生日" aria-label="Username" aria-describedby="birthday">
+                
+
+              </div>
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="address">地址</span>
+                <input type="text" class="form-control" placeholder="地址" aria-label="Username" aria-describedby="address">
+                <span class="input-group-text text-success " id="address"><i class="bi bi-house-fill"></i></span>
+              </div>
+            </form>
+        </div>
+        <div class="changePhoto col-4 border-start ">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="#" alt="" id="demo" class="d-none">
+            <label class="btn btn-outline-dark d-inline-block fs-6 " for="file1" id="labrlFile1">檔案上傳</label>
+            <input name="changememphoto" type="file" accept="image/gif, image/jpeg, image/png" id="file1" class="d-none">
+            
+           
+            </div>
+        <p class="text-center mt-2">jimmy123</p></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-8">
+            <div class="input-group input-group-sm mb-2 ">
+     
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="gmail">信箱帳號</span>
+                <input type="text" class="form-control" placeholder="XXX@gmail.com" aria-label="gmail" aria-describedby="gmail">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                    <span class="input-group-text" >新密碼</span>
+                    <input type="password" class="form-control" id="newPassword" placeholder="請輸入英文或數字共8個字元以上" aria-label="newPassword" aria-describedby="newPassword">
+                    <div class="d-flex justify-content-center align-items-center">
+                    <input type="checkbox" class="ms-3 me-2" id="chkPasw">
+			        <label class="custom-control-label m-0 p-0" for="chkPasw">
+                        <span >顯示密碼</span>
+                    </label>
+                </div>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" >重新輸入密碼</span>
+                <input type="text" class="form-control" id="recheckPassword" placeholder="" disabled aria-label="recheckPassword" aria-describedby="recheckPassword">
+        </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script> 
+    <script>
+    const demo = document.getElementById("demo");
+    const newPassword= document.getElementById("newPassword");
+    const recheckPassword = document.getElementById("recheckPassword")
+    const changePic = document.getElementById("file1")
+      .addEventListener("change", function(e) {
+          const file = e.target.files[0];
+          if (!file) { return; }
+
+          //檔案上傳後欲讀畫面
+          const reader = new FileReader();
+    
+          //readAsDataURL讀取操作完後 會觸發onload 同時 result屬性包含一個data:URL格式的字符串（base64 编码）
+          reader.readAsDataURL(file);
+
+          
+          
+
+        //   reader.onload = function(e){demo.src=e.target.result;console.log("成功")}
+            reader.onload = (e)=>{demo.src=e.target.result;
+            demo.classList.remove('d-none');
+ 
+            console.log("成功")
+            //上傳後將檔案清除
+            e.target.value = '';
+            console.log("移除")}
+
+         
+      });
+
+
+    document.getElementById('chkPasw').addEventListener('click',function(){
+        const attrType = newPassword.getAttribute('type')
+        if(attrType==='password'){
+        newPassword.setAttribute('type', 'text')}else{
+        newPassword.setAttribute('type', 'password')}
+    })
+    
+
+
+    newPassword.addEventListener("keydown",function(e){
+        recheckPassword.removeAttribute('disabled')
+        console.log("change")
+    })
+    
+
+    </script>
+</body>
+</html>

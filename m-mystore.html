@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<style>
+    td img{width:100px;
+    aspect-ratio: 1/1;}
+</style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-2"> 
+                    <h4 >商品清單</h4>
+                </div>
+               
+            </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th scope="col">加入購物車</th>
+                        <th scope="col">刪除項目</th>
+                        <th scope="col">照片</th>
+                        <th scope="col">品項</th>
+                        <th scope="col">價錢</th>
+
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr>
+                       
+                        <td><i class="bi bi-cart-fill"></i></td>
+                        <td><i class="bi bi-trash3-fill"></i></td>
+                        <td><img src="./img/a.jpg" alt=""></td>
+                        <td>人頭馬VSOP特選桶白蘭地</td>
+                        <td>$1049元</td>
+                      </tr>
+                      <tr>
+                        <td><i class="bi bi-cart-fill"></i></td>
+                        <td><i class="bi bi-trash3-fill"></i></td>
+                        <td><img src="./img/a.jpg" alt=""></td>
+                        <td>人頭馬VSOP特選桶白蘭地</td>
+                        <td>$1049元</td>      
+                      </tr>
+                      <tr>
+                        <td><i class="bi bi-cart-fill"></i></td>
+                        <td><i class="bi bi-trash3-fill"></i></td>
+                        <td><img src="./img/a.jpg" alt=""></td>
+                        <td>人頭馬VSOP特選桶白蘭地</td>
+                        <td>$1049元</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </div>
+            <hr>
+            <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
+                    <a class="btn btn-primary"  href="#allstore" type="button">
+                        檢視所有商品&nbsp;<i class="bi bi-caret-down-fill"></i>
+                      </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="./img/faceicon.png" class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script> 
+    <script>
+        var toastTrigger = document.getElementById('liveToastBtn')
+        var toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+         toastTrigger.addEventListener('click', function () {
+         var toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+  })
+}
+    </script>
+    
+</body>
+</html>
